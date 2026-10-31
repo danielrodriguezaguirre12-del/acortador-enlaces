@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AcortadorTablaEnlaces",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:GetItem"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-1:<ID-DE-CUENTA>:table/short_links"
+    }
+  ]
+}
