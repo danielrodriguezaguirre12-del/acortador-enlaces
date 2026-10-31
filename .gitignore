@@ -1,0 +1,14 @@
+# Entorno virtual y caché de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Variables de entorno: nunca subir valores reales ni claves
+.env
+*.pem
+
+# Editor / sistema
+.vscode/
+.DS_Store
