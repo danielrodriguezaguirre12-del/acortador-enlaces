@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acortador de enlaces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Acortador de enlaces</h1>
+      <p class="subtitle">S3 · EC2 (FastAPI) · DynamoDB</p>
+    </header>
+
+    <form id="shorten-form" novalidate>
+      <label for="url-input">URL original</label>
+      <div class="row">
+        <input id="url-input" type="url" placeholder="https://www.ejemplo.com/articulo" required autocomplete="off">
+        <button id="submit-btn" type="submit">Acortar</button>
+      </div>
+    </form>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section id="result" class="result" hidden>
+      <label for="short-url">Enlace corto</label>
+      <div class="row">
+        <input id="short-url" type="text" readonly>
+        <button id="copy-btn" type="button" class="secondary">Copiar</button>
+      </div>
+      <p class="meta">
+        <a id="open-link" href="#" target="_blank" rel="noopener">Abrir enlace</a>
+        · UUID: <code id="short-code"></code>
+      </p>
+      <p id="copy-status" class="ok" hidden>Copiado al portapapeles</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
